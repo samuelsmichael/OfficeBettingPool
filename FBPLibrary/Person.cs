@@ -8,7 +8,12 @@ namespace FBPLibrary {
         private string _FirstName;
         private string _LastName;
         private Guid _Id;
-        private ContactInfo _ContactInfo;
+        private string _HomePhone;
+        private string _CellPhone;
+        private string _ExternalOfficeWorkPhone;
+        private string _InternalOfficeWorkPhone;
+        private string _Email;
+
         public override int GetHashCode() {
             return _Id.GetHashCode();
         }

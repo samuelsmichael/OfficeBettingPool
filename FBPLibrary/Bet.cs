@@ -6,7 +6,9 @@ using System.Text;
 namespace FBPLibrary {
     public class Bet {
         private Decimal _Amount;
-        private Person _Person;
+        private Person _PersonId;
+        private Guid _GameId;
+        private Guid _Id;
         public Decimal Amount {
             get {
                 return _Amount;
@@ -17,7 +19,7 @@ namespace FBPLibrary {
         }
         public Person Person {
             get {
-                return _Person;
+                return _PersonId;
             }
             set {
                 Person = value;
