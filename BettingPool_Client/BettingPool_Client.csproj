@@ -149,6 +149,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Temp\Sunriver\SunriverDatabase\Common\Common.csproj">
+      <Project>{F42E57F0-2327-4E3D-B9F6-2403B6C6CC9D}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FBPLibrary\FBPLibrary.csproj">
       <Project>{ACCA3D36-14BE-456E-BBBB-9FA4214F7E9B}</Project>
       <Name>FBPLibrary</Name>

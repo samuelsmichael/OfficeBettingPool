@@ -6,10 +6,15 @@ using System.Text;
 
 namespace FBPLibrary {
     public class Game {
-        private Guid _Id;
-        private SportEvent _SportEvent;
-        private List<Bet> _Bets;
-        
+        public Guid GameId { get; set; }
+        public SportEvent _SportEvent { get; set; }
+        public List<Bet> Bets { get; set; }
+
+        public Game(Guid gameId, SportEvent sportEvent, List<Bet> bets) {
+            GameId = gameId;
+            _SportEvent = sportEvent;
+            Bets = bets;
+        }
 
         private void produceGrid() {
             decimal pool=derivePool();
@@ -18,15 +23,15 @@ namespace FBPLibrary {
         }
         private decimal derivePool() {
             decimal pool = 0;
-            foreach (Bet bet in _Bets) {
+            foreach (Bet bet in Bets) {
                 pool += bet.Amount;
             }
             return pool;
         }
         private Hashtable deriveShares(decimal pool) {
             Hashtable shares = new Hashtable();
-            foreach (Bet bet in _Bets) {
-                shares.Add(bet.Person,(double)((double)bet.Amount/(double)pool));
+            foreach (Bet bet in Bets) {
+                shares.Add(bet._Person,(double)((double)Convert.ToDouble(bet.Amount)/(double)pool));
             }
             /*TODO: Add up all the amounts, and whatever the leftover is, allocate it (randomly) to
                 a share whose already got a fraction allocation.

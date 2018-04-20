@@ -5,25 +5,15 @@ using System.Text;
 
 namespace FBPLibrary {
     public class Bet {
-        private Decimal _Amount;
-        private Person _PersonId;
-        private Guid _GameId;
-        private Guid _Id;
-        public Decimal Amount {
-            get {
-                return _Amount;
-            }
-            set {
-                _Amount = value;
-            }
-        }
-        public Person Person {
-            get {
-                return _PersonId;
-            }
-            set {
-                Person = value;
-            }
+        public Decimal Amount {get; set; }
+        public Person _Person {get; set; }
+        public Guid GameId {get; set; }
+        public Guid BetId {get; set; }
+        public Bet(decimal amount, Person person, Guid gameid, Guid betid) {
+            Amount = amount;
+            _Person = person;
+            GameId = gameid;
+            BetId = betid;
         }
     }
 }

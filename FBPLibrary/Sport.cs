@@ -10,6 +10,9 @@ namespace FBPLibrary {
         baseball = 2
     }
     public class Sport {
-        private SportTypes _SportsType;
+        public SportTypes _SportsType {get; set;}
+        public Sport(SportTypes st) {
+            _SportsType=st;
+        }
     }
 }

@@ -5,17 +5,23 @@ using System.Text;
 
 namespace FBPLibrary {
     public class Person {
-        private string _FirstName;
-        private string _LastName;
-        private Guid _Id;
-        private string _HomePhone;
-        private string _CellPhone;
-        private string _ExternalOfficeWorkPhone;
-        private string _InternalOfficeWorkPhone;
-        private string _Email;
-
-        public override int GetHashCode() {
-            return _Id.GetHashCode();
+        private string FirstName;
+        private string LastName;
+        private Guid PersonId;
+        private string HomePhone;
+        private string CellPhone;
+        private string ExternalOfficeWorkPhone;
+        private string InternalOfficeWorkPhone;
+        private string Email;
+        public Person(string firstName, string lastName, Guid personId, string homePhone, string cellPhone, string extOffPhone, string intOfficePhone, string email) {
+            FirstName = firstName;
+            LastName = lastName;
+            PersonId = personId;
+            HomePhone = homePhone;
+            CellPhone = cellPhone;
+            ExternalOfficeWorkPhone = extOffPhone;
+            InternalOfficeWorkPhone = intOfficePhone;
+            Email = email;
         }
     }
 }
