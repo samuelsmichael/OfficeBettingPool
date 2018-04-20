@@ -7,7 +7,7 @@ using System.Text;
 namespace FBPLibrary {
     public class Game {
         public Guid GameId { get; set; }
-        public SportEvent _SportEvent { get; set; }
+        private SportEvent _SportEvent { get; set; }
         public List<Bet> Bets { get; set; }
 
         public Game(Guid gameId, SportEvent sportEvent, List<Bet> bets) {

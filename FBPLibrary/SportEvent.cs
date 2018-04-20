@@ -16,7 +16,7 @@ namespace FBPLibrary {
             VisitingTeam = visitingTeam;
             Date = date;
             _Sport = sport;
-            SportEventId = SportEventId;
+            SportEventId = sportEventId;
             Games = games;
         }
     }

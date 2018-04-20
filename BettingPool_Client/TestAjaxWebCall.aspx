@@ -20,12 +20,13 @@
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (jsonResult) {
-                JSON.stringify(jsonResult);
                 debugger;
+                JSON.stringify(jsonResult);
                 $("#divResult").html("Their data: " + JSON.stringify(jsonResult));
                 theirData = JSON.parse(jsonResult.d);
             },
             error: function (e) {
+                debugger;
                 $("#divResult").html("Something Wrong.");
             }
         });
