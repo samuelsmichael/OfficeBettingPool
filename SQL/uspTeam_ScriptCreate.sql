@@ -1,7 +1,7 @@
 USE [OfficeSportsPool]
 GO
 
-/****** Object:  Table [dbo].[Team]    Script Date: 4/19/2018 3:32:46 PM ******/
+/****** Object:  Table [dbo].[Team]    Script Date: 4/20/2018 3:30:45 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,13 +18,6 @@ CREATE TABLE [dbo].[Team](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[Team]  WITH CHECK ADD  CONSTRAINT [FK_Team_SportType] FOREIGN KEY([SportTypeId])
-REFERENCES [dbo].[SportType] ([SportTypeId])
-GO
-
-ALTER TABLE [dbo].[Team] CHECK CONSTRAINT [FK_Team_SportType]
 GO
 
 

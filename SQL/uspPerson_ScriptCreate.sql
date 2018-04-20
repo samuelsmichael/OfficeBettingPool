@@ -1,7 +1,7 @@
 USE [OfficeSportsPool]
 GO
 
-/****** Object:  Table [dbo].[Person]    Script Date: 4/19/2018 3:32:18 PM ******/
+/****** Object:  Table [dbo].[Person]    Script Date: 4/20/2018 3:29:36 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -24,5 +24,4 @@ CREATE TABLE [dbo].[Person](
 ) ON [PRIMARY]
 
 GO
-
 

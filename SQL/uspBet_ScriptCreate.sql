@@ -1,7 +1,7 @@
 USE [OfficeSportsPool]
 GO
 
-/****** Object:  Table [dbo].[Bet]    Script Date: 4/19/2018 3:31:11 PM ******/
+/****** Object:  Table [dbo].[Bet]    Script Date: 4/20/2018 3:28:47 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -19,20 +19,6 @@ CREATE TABLE [dbo].[Bet](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[Bet]  WITH CHECK ADD  CONSTRAINT [FK_Bet_Game] FOREIGN KEY([GameId])
-REFERENCES [dbo].[Game] ([GameId])
-GO
-
-ALTER TABLE [dbo].[Bet] CHECK CONSTRAINT [FK_Bet_Game]
-GO
-
-ALTER TABLE [dbo].[Bet]  WITH CHECK ADD  CONSTRAINT [FK_Bet_Person] FOREIGN KEY([PersonId])
-REFERENCES [dbo].[Person] ([PersonId])
-GO
-
-ALTER TABLE [dbo].[Bet] CHECK CONSTRAINT [FK_Bet_Person]
 GO
 
 
